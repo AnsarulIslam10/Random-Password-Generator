@@ -8,6 +8,8 @@ const allChars = upperCase + lowerCase + number + symbol;
 
 function createPassword(){
 
+    copy.src = "images/copy.png"
+
     function getRandomLenght(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -29,6 +31,7 @@ function createPassword(){
 function copyPassword(){
     passwordBox.select();
     navigator.clipboard.writeText(passwordBox.value);
+    copy.src = "images/check.png"
     passwordBox.value = ""; /*passwordBox will automatically be empty
                             after clicking on the copy icon*/
 }
