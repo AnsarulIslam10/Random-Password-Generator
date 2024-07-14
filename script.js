@@ -29,4 +29,6 @@ function createPassword(){
 function copyPassword(){
     passwordBox.select();
     navigator.clipboard.writeText(passwordBox.value);
+    passwordBox.value = ""; /*passwordBox will automatically be empty
+                            after clicking on the copy icon*/
 }
